@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['sample2-spec.js'],
+  specs: ['sample-spec.js'],
   framework: 'jasmine2',
   // capabilities: {
   //   browserName: 'chrome',
@@ -28,7 +28,7 @@ exports.config = {
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
       savePath: './',
-      filePrefix: 'TEST-xmloutput'
+      filePrefix: 'xmlresults'
     }));
   },
   onComplete: function() {
@@ -53,7 +53,7 @@ exports.config = {
         screenshotsOnlyOnFailure: true,
         testPlatform: platform
       };
-      new HTMLReport().from('./testresults/xmloutput.xml', testConfig);
+      new HTMLReport().from('.xmlresults.xml', testConfig);
     });
   }
 };

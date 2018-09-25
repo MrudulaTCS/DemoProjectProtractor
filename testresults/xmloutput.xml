@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="1" tests="6" time="22.45">
+ <testsuite name="Checking UI elements of Login" timestamp="2018-09-20T21:36:26" hostname="localhost" time="12.649" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Checking UI elements of Login" name="Should launch the application in the browser" time="12.397" />
+  <testcase classname="Checking UI elements of Login" name="Should verify the Back button is present in Login Page" time="0.177" />
+  <testcase classname="Checking UI elements of Login" name="Should verify the Next button is present in Login Page" time="0.072" />
+ </testsuite>
+ <testsuite name="Navigation of Login Button" timestamp="2018-09-20T21:36:38" hostname="localhost" time="9.801" errors="0" tests="3" skipped="0" disabled="0" failures="1">
+  <testcase classname="Navigation of Login Button" name="Should launch the application in the browser" time="1.822" />
+  <testcase classname="Navigation of Login Button" name="Should see the Login button" time="3.842">
+   <failure type="toBeTruthy" message="Expected false to be truthy."><![CDATA[Error: Failed expectation
+    at Object.<anonymous> (C:\BTTVLSD Automation\BTSportsprotractorTAL\sample-spec.js:14:50)
+    at C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:110:25
+    at new ManagedPromise (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+    at ControlFlow.promise (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+    at schedulerExecute (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+    at TaskQueue.executeNext_ (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+    at asyncRun (C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+    at C:\Users\611422444\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:676:7]]>
+   </failure>
+  </testcase>
+  <testcase classname="Navigation of Login Button" name="Should able to see the Enter BT ID page" time="4.136" />
+ </testsuite>
+</testsuites>

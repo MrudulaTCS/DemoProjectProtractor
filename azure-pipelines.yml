@@ -13,7 +13,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm init
+    npm init --yes
     npm install
     ./node_modules/.bin/webdriver-manager update
     ./node_modules/.bin/webdriver-manager start

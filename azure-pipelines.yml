@@ -23,8 +23,9 @@ steps:
 -task: RunScripts@1
   inputs:
   Tool: Node
-  Arguments : ./protractor.conf.js
-  Working Folder: ./
+  Arguments : './protractor.conf.js'
+  Working Folder: './'
+    displayName: 'Run protractor'
 
 
 - script: |

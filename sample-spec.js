@@ -2,7 +2,7 @@ var EC = protractor.ExpectedConditions;
 
 describe('Navigation of Login Button', function() {
   it('Should launch the application in the browser', function() {
-    browser.get('https://www.google.com');
+    browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
     browser.manage().window().maximize();
     browser.executeScript("document.body.style.zoom='67%'");
   });

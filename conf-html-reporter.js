@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['sample2-spec.js', 'sample-spec.js'],
+  specs: ['sample2-spec.js'],
   framework: 'jasmine2',
   // capabilities: {
   //   browserName: 'chrome',
@@ -27,8 +27,8 @@ exports.config = {
     var jasmineReporters = require('jasmine-reporters');
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
-      savePath: 'testresults',
-      filePrefix: 'xmloutput'
+      savePath: './',
+      filePrefix: 'TEST-xmloutput'
     }));
   },
   onComplete: function() {

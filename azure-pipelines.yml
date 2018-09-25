@@ -12,6 +12,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
+
 - script: |
     npm init --yes
     npm install
@@ -19,8 +20,10 @@ steps:
     webdriver-manager update
     webdriver-manager start
 
-steps:
-  displayName: 'protractor run'
+-task: RunScripts@1
+  Tool: Node
+  Arguments : ./protractor.conf.js
+  Working Folder: ./
 
 - script: |
     protractor conf.js

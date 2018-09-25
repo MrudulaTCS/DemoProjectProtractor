@@ -21,9 +21,11 @@ steps:
     webdriver-manager start
 
 -task: RunScripts@1
+  inputs:
   Tool: Node
   Arguments : ./protractor.conf.js
   Working Folder: ./
+
 
 - script: |
     protractor conf.js

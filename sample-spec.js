@@ -22,9 +22,9 @@ describe('Navigation of Login Button', function() {
     browser.manage().window().maximize();
     // browser.executeScript("document.body.style.zoom='67%'");
     var loginButton = element(by.css('#login_button_id'));
-    browser.wait(EC.visibilityOf(loginButton), 30000);
+    //browser.wait(EC.visibilityOf(loginButton), 30000);
     //browser.takeScreenshot();
-    //browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
+    browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 30000);
   });
 
   // it('Should see the Login button', function() {

@@ -20,8 +20,9 @@ describe('Navigation of Login Button', function() {
     browser.manage().deleteAllCookies();
     browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
     browser.manage().window().maximize();
+    browser.sleep(5000);
     // browser.executeScript("document.body.style.zoom='67%'");
-    var loginButton = element(by.css('#login_button_id'));
+    var loginButton = element(by.css('#splashTitle_id'));
     //browser.wait(EC.visibilityOf(loginButton), 30000);
     //browser.takeScreenshot();
     browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 30000);

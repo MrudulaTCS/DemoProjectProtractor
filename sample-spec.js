@@ -12,22 +12,23 @@ var EC = protractor.ExpectedConditions;
 
 describe('Navigation of Login Button', function() {
   it('Should launch the application in the browser', function() {
+    browser.manage().deleteAllCookies();
     browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
-    //browser.get('https://www.google.com');
     browser.manage().window().maximize();
     browser.executeScript("document.body.style.zoom='67%'");
     var loginButton = element(by.css('#login_button_id'));
-    //browser.wait(EC.visibilityOf(loginButton), 15000);
-    browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
+    browser.wait(EC.visibilityOf(loginButton), 15000);
+    //browser.takeScreenshot();
+    //browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
   });
-  //
-  //   // it('Should see the Login button', function() {
-  //   //   var loginButton = element(by.css('#login_button_id'));
-  //   //   //browser.wait(EC.visibilityOf(loginButton), 15000);
-  //   //   //expect(loginButton.isPresent()).toEqual(true);
-  //   //   browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
-  //   //   browser.sleep(3000);
-  //   // });
+
+  it('Should see the Login button', function() {
+    var loginButton = element(by.css('#login_button_id'));
+    //browser.wait(EC.visibilityOf(loginButton), 15000);
+    //expect(loginButton.isPresent()).toEqual(true);
+    browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
+    browser.sleep(3000);
+  });
   //   //
   //   // it('Should able to see the Enter BT ID page', function() {
   //   //   browser.actions().sendKeys(protractor.Key.ENTER).perform();

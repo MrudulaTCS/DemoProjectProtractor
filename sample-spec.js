@@ -10,6 +10,11 @@ var EC = protractor.ExpectedConditions;
 
 //  ------ Sample with Google-------
 
+beforeEach(function() {
+  originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+  jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+});
+
 describe('Navigation of Login Button', function() {
   it('Should launch the application in the browser', function() {
     browser.manage().deleteAllCookies();

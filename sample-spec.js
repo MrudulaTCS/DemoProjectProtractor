@@ -21,8 +21,8 @@ describe('Navigation of Login Button', function() {
     browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
     browser.manage().window().maximize();
     // browser.executeScript("document.body.style.zoom='67%'");
-    // var loginButton = element(by.css('#login_button_id'));
-    // browser.wait(EC.visibilityOf(loginButton), 15000);
+    var loginButton = element(by.css('#login_button_id'));
+    browser.wait(EC.visibilityOf(loginButton), 15000);
     //browser.takeScreenshot();
     //browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
   });

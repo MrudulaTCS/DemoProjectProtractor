@@ -2,12 +2,12 @@ exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['sample-spec.js'],
   framework: 'jasmine2',
-  // capabilities: {
-  //   browserName: 'chrome',
-  //   chromeOptions: {
-  //     args: ["--headless", "--window-size=800x600"]
-  //   }
-  // },
+  capabilities: {
+    browserName: 'chrome',
+    // chromeOptions: {
+    //   args: ["--headless", "--window-size=800x600"]
+    // }
+  },
   plugins: [{
     package: 'jasmine2-protractor-utils',
     disableHTMLReport: false,

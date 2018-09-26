@@ -5,9 +5,9 @@ exports.config = {
   //allScriptsTimeout: 600000,
   capabilities: {
     browserName: 'chrome'
-    // chromeOptions: {
-    //   args: ["--headless", "--window-size=800x600"]
-    // }
+    chromeOptions: {
+      args: ["--headless", "--window-size=800x600"]
+    }
   },
   jasmineNodeOpts: {
     defaultTimeoutInterval: 6000000

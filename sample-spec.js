@@ -8,17 +8,15 @@ var EC = protractor.ExpectedConditions;
 //     var testElement = element(by.css('#login_title_id'));
 //   });
 
-
-
 //  ------ Sample with Google-------
 
 describe('Navigation of Login Button', function() {
   it('Should launch the application in the browser', function() {
-    //browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
-    browser.get('https://www.google.com');
+    browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
+    //browser.get('https://www.google.com');
     browser.manage().window().maximize();
     browser.executeScript("document.body.style.zoom='67%'");
-    var loginButton = element(by.css('#gb_70'));
+    var loginButton = element(by.css('#login_button_id'));
     //browser.wait(EC.visibilityOf(loginButton), 15000);
     browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
   });

@@ -9,6 +9,9 @@ exports.config = {
     //   args: ["--headless", "--window-size=800x600"]
     // }
   },
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 2500000
+  },
   plugins: [{
     package: 'jasmine2-protractor-utils',
     disableHTMLReport: false,

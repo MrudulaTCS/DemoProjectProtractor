@@ -22,20 +22,20 @@ describe('Navigation of Login Button', function() {
     browser.manage().window().maximize();
     browser.sleep(1000);
     console.log('Sample text to make sure it waited');
-    // browser.executeScript("document.body.style.zoom='67%'");
-    var loginButton = element(by.css('#splashTitle_id'));
+    browser.executeScript("document.body.style.zoom='67%'");
+    //var loginButton = element(by.css('#splashTitle_id'));
     //browser.wait(EC.visibilityOf(loginButton), 30000);
     //browser.takeScreenshot();
-    browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 30000);
+    //browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 30000);
   });
 
-  // it('Should see the Login button', function() {
-  //   var loginButton = element(by.css('#login_button_id'));
-  //   //browser.wait(EC.visibilityOf(loginButton), 15000);
-  //   //expect(loginButton.isPresent()).toEqual(true);
-  //   browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
-  //   browser.sleep(3000);
-  // });
+  it('Should see the Login button', function() {
+    var loginButton = element(by.css('#login_button_id'));
+    //browser.wait(EC.visibilityOf(loginButton), 15000);
+    expect(loginButton.isPresent()).toEqual(true);
+    // browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
+    // browser.sleep(3000);
+  });
   //   //
   //   // it('Should able to see the Enter BT ID page', function() {
   //   //   browser.actions().sendKeys(protractor.Key.ENTER).perform();

@@ -2,15 +2,15 @@ exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['sample-spec.js'],
   framework: 'jasmine2',
-  allScriptsTimeout: 600000,
+  //allScriptsTimeout: 600000,
   capabilities: {
-    browserName: 'chrome',
+    browserName: 'chrome'
     // chromeOptions: {
     //   args: ["--headless", "--window-size=800x600"]
     // }
   },
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 2500000
+    defaultTimeoutInterval: 6000000
   },
   plugins: [{
     package: 'jasmine2-protractor-utils',

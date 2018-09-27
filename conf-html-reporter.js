@@ -1,6 +1,6 @@
 exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['sample-spec.js'],
+  specs: ['sample-spec.js', 'sample2-spec.js'],
   framework: 'jasmine2',
   //allScriptsTimeout: 600000,
   capabilities: {

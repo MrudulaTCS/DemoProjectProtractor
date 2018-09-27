@@ -4,7 +4,7 @@ exports.config = {
   framework: 'jasmine2',
   //allScriptsTimeout: 600000,
   capabilities: {
-    browserName: 'chrome'
+    browserName: 'chrome',
     chromeOptions: {
       args: ["--headless", "--window-size=800x600"]
     }

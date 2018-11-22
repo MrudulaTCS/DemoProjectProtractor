@@ -1,5 +1,5 @@
 exports.config = {
-  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['upsell_test.js'],
   framework: 'jasmine2',
   //allScriptsTimeout: 600000,

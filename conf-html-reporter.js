@@ -1,14 +1,15 @@
 exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['sample-spec.js', 'sample2-spec.js'],
+  specs: ['upsell_test.js'],
   framework: 'jasmine2',
   //allScriptsTimeout: 600000,
   capabilities: {
     browserName: 'chrome',
-    chromeOptions: {
-      args: ["--headless", "--disable-gpu", "--window-size=800x600"]
-    }
+    // chromeOptions: {
+    //   args: ["--headless", "--disable-gpu", "--window-size=800x600"]
+    // }
   },
+
   jasmineNodeOpts: {
     defaultTimeoutInterval: 6000000
   },
@@ -34,6 +35,23 @@ exports.config = {
       savePath: './',
       filePrefix: 'xmlresults'
     }));
+    // var myReporter = {
+    //   specStarted: function(result) {
+    //     console.log("Spect started...", result.fullName);
+    //   },
+    //   specDone: function(result) {
+    //     if (result.status === 'failed') {
+    //       console.log("Spec done... failed", result);
+    //     } else {
+    //       console.log("Spec done... passed...", result);
+    //     }
+    //   },
+    //   suiteDone: (result) => {
+    //     console.log('Suite done: ' + result.description + ' was ' + result.status);
+    //   }
+    // }
+
+    // jasmine.getEnv().addReporter(myReporter);
   },
   onComplete: function() {
     var browserName, browserVersion;

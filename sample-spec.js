@@ -1,48 +1,27 @@
-var EC = protractor.ExpectedConditions;
-
-
-// describe('Navigation of Login Button', function() {
-//   it('Should launch the application in the browser', function() {
-//     browser.get('https://dev.tvac.bt.com/web/prod');
-//     browser.manage().window().maximize();
-//     var testElement = element(by.css('#login_title_id'));
-//   });
-
-//  ------ Sample with Google-------
-
-// beforeEach(function() {
-//   originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-//   jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-// });
-
-describe('Navigation of Login Button', function() {
-  it('Should launch the application in the browser', function() {
-    browser.manage().deleteAllCookies();
-    browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
-    browser.manage().window().maximize();
-    browser.sleep(1000);
-    console.log('Sample text to make sure it waited');
-    browser.executeScript("document.body.style.zoom='67%'");
-    //var loginButton = element(by.css('#splashTitle_id'));
-    //browser.wait(EC.visibilityOf(loginButton), 30000);
-    //browser.takeScreenshot();
-    //browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 30000);
+describe('Upsell', function() {
+  beforeEach(function() {
+    this.actionwords = Object.create(require('./actionwords.js').Actionwords);
   });
 
-  it('Should see the Login button', function() {
-    var loginButton = element(by.css('#login_button_id'));
-    //browser.wait(EC.visibilityOf(loginButton), 15000);
-    expect(loginButton.isPresent()).toEqual(true);
-    // browser.wait(expect(loginButton.isPresent()).toBeTruthy(), 10000);
-    // browser.sleep(3000);
-  });
-  //   //
-  it('Should able to see the Enter BT ID page', function() {
-    browser.actions().sendKeys(protractor.Key.ENTER).perform();
-    browser.actions().sendKeys(protractor.Key.RIGHT).perform();
-    var testElement = element(by.css('#login_title_id'));
-    browser.wait(expect(testElement.isPresent()).toBeTruthy(), 10000);
-    expect(testElement.getText()).toEqual('Enter your BT ID');
-    browser.sleep(3000);
+  it('UPSL_01 Verify if the EE Small Scale_Heston user sees upsell message on trying login from the app from channel Packshot (uid:4a364c72-bbb1-4ebb-8016-441d731c01a8)', function() {
+    // Tags: P1 AllClients
+    // Given I launch the BTSport application
+    this.actionwords.iLaunchTheBTSportApplication();
+    // Given I am not Logged in and I am on LoginPage from BTSport1HDPackshot_HomePage
+    this.actionwords.iAmNotLoggedInAndIAmOnLoginPageFromBTSport1HDPackshotHomePage();
+    // When I enter valid username as "ee@btsport.com" then valid password as "Pass@1234" and select login
+    this.actionwords.iEnterValidUsernameAsP1ThenValidPasswordAsP2AndSelectLogin("ee@btsport.com", "Pass@1234");
+    // Then I should see the text for "Title_Upsell" as "How to watch"
+    this.actionwords.iShouldSeeTheTextForP1AsP2("Title_Upsell", "How to watch");
+    // Then I should see the text for "Message_Upsell" as "To access the BT Sport app on this device you'll need to upgrade your subscription, for more info on how to do this visit https://ee.co.uk/why-ee/bt-sport."
+    this.actionwords.iShouldSeeTheTextForP1AsP2("Message_Upsell", "To access the BT Sport app on this device you'll need to upgrade your subscription, for more info on how to do this visit https://ee.co.uk/why-ee/bt-sport.");
+    // Then I should see the "BackButton_Upsell"
+    this.actionwords.iShouldSeeTheP1("BackButton_Upsell");
+    // Then I navigate to BackButton_Upsell
+    this.actionwords.iNavigateToBackButtonUpsell();
+    // Then I select the "BackButton_Upsell"
+    this.actionwords.iSelectTheP1("BackButton_Upsell");
+    // Then I should see the "HomePage"
+    this.actionwords.iShouldSeeTheP1("HomePage");
   });
 });

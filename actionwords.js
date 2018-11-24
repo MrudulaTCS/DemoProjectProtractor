@@ -1,7 +1,7 @@
 exports.Actionwords = {
   iLaunchTheBTSportApplication: function() {
     // browser.manage().deleteAllCookies()
-    browser.get('https://sport:sport@dev.tvac.bt.com/sportApp/');
+    browser.get('');
     browser.sleep(3000);
     browser.manage().window().maximize();
     //browser.executeScript("try {localStorage.removeItem('access_token');} catch(exception) {}");
